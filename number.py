@@ -1,4 +1,6 @@
 # erstes Tutorial
+# die tutorial reihe die ich nutze, nutze ich nur als inspiration und mache die sachen nicht nach, sondern
+# nutze es nur als quelle für Dinge, die ich ausprobeire
 
 def funwithnumber(zahl):
     zahl
@@ -27,7 +29,12 @@ def funwithnumber(zahl):
 def funwithstring(zeichenkette):
     print("willkommen bei spass mit String")
     print(zeichenkette+"<-das ist deine zeichenkette")
+    print(zeichenkette +"\n" +zeichenkette)
+    print(zeichenkette + r"\n" +zeichenkette)
 # macht paar dinge mit dem String, den man eigegeben hat
+
+def funwithlisten():
+    print("willkommen viel spaß mit Listen")
 
 while(): # damit man auch mehrere runden drehen kann, ohne dass das programm beendet
     while(): # damit man die chance bei einer flaschen eingabe hat, noch mal von vorne zu beginnen
