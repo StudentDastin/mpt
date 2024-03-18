@@ -1,6 +1,7 @@
 # erstes Tutorial
 # die tutorial reihe die ich nutze, nutze ich nur als inspiration und mache die sachen nicht nach, sondern
 # nutze es nur als quelle für Dinge, die ich ausprobeire
+import time
 
 def funwithnumber(zahl):
     zahl
@@ -33,17 +34,42 @@ def funwithstring(zeichenkette):
     print(zeichenkette + r"\n" +zeichenkette)
 # macht paar dinge mit dem String, den man eigegeben hat
 
-def funwithlisten():
+def funwithlisten(liste):
     print("willkommen viel spaß mit Listen")
-
-while(): # damit man auch mehrere runden drehen kann, ohne dass das programm beendet
-    while(): # damit man die chance bei einer flaschen eingabe hat, noch mal von vorne zu beginnen
-        match input("willst du spass mit zahlen, druecke 1 oder willst du spass mit String, dann drueck 2"):
+    print("das folgende ist deine Liste")
+    x=0
+    #for x in liste:
+    while(x<=liste.__len__):
+        print(liste[x-1])        
+    print("jetzt schauen wir uns mal die liste in der umgekehrten reihenfolge an")
+    for x in liste:        
+        print(liste[x-liste.__len__]-1)
+        print("platzhalter")
+# macht paar dinge mit der Liste die man übergeben hat
+# damit man auch mehrere runden drehen kann, ohne dass das programm beendet
+x=0
+while(x<=100): 
+    print("bin in der ersten Schleife")
+    x = x+1
+    time.sleep(2)
+    while(x<=10): # damit man die chance bei einer flaschen eingabe hat, noch mal von vorne zu beginnen
+        print("bin in der Schleife, spaß mit x")
+        match int(input("willst du spass mit zahlen, druecke 1 oder willst du spass mit String, dann drueck 2 oder willst du spass mit Listen haben, dann drücke 3")):
             case 1:
                 funwithnumber(int(input("gib eine zahl ein")))
                 break
             case 2:
                 funwithstring(input("gib eine beliebige zeicehnkette ein"))
+                break
+            case 3:
+                counter = 0
+                listlenght = int(input("wie groß soll deine Liste sein"))
+                liste= []
+                while(counter <= listlenght):
+                    inhalt = input("gib den"+ str(counter) +"Inhalt der Liste ein")
+                    liste.append(inhalt)
+                    counter = counter +1                   
+                funwithlisten(liste)
                 break
             case _:
                 print("falsche Eingabe")
